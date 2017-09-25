@@ -16,7 +16,7 @@ body {
     /* float: right; */
 }
 
-.hideShow{
+.showM{
     z-index: 1;
     display: none;
     position: absolute;
@@ -187,6 +187,7 @@ a:link,a:visited{
 .articleContent {
     color: black;
     font-family: 'Droid Sans', sans-serif;
+
 }
 
 a:hover, a:active{
@@ -203,13 +204,17 @@ a:hover, a:active{
     width: 25%;
 }
 
+.centerObject{
+    text-align: center;
+
+}
 @media (min-width: 570px) {
 
     #dropDown{
         display: none;
     }
     
-    .hideShowPC{
+    .showPC{
         display: block;
         float: right;
         width: 60%;
@@ -217,10 +222,15 @@ a:hover, a:active{
     }
     
     .innerBody{
+        max-width: 95%;
         display: flex;
         flex-direction: column ;
         align-items: center;
 		align-content: center;
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+        margin-top: 2em;
+        margin-bottom: 2em;
         
      
     }
