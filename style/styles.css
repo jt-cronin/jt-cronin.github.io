@@ -1,0 +1,260 @@
+body {
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    margin: 0;
+}
+
+.topHeader{
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+.fa-bars{
+    /* float: right; */
+}
+
+.hideShow{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.hideShowPC{
+    display: none;
+}
+
+a:link,a:visited{
+	text-decoration: none;
+    color: rgb(64,64,64); 
+}
+
+
+.parentBox:before, .parentBox:after {
+    content: " ";
+    display: table;
+}
+
+.parentBox:after{
+    clear: both;
+}
+
+.topHeader {
+    padding: 20px;
+    background-color: rgb(64, 64, 64);
+    font-family: 'Roboto', sans-serif;
+    font-size: .65em;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+#headerName {
+    color: rgb(220, 220, 220);
+    margin: 2px;
+    /* float: left; */
+}
+
+
+#headerInfo{
+    color: rgb(166, 166, 166);
+    font-size: 1.2em;
+    /* float: left; */
+    /* margin-top: 1px; */
+}
+
+.infoJT{
+    float: left;
+}
+
+#dropDown{
+    float: right;
+}
+
+.linkHeader {
+    /* display: none; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    background-color: rgb(244, 242, 240);
+/*     border-bottom: 2px solid rgb(224, 224, 224); */
+    /* position: relative; */
+    height: 40px;
+    /* float: left; */
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    z-index: 1;
+}
+
+.socialMedia{
+    /* position: absolute; */
+    /* left: 0; */
+    float: left ;
+}
+
+.navLinks {
+    /* position: absolute; */
+    /* right: 0; */
+    /* top: 20px; */
+    /* margin-top: 10px; */
+    float: right;
+    position: relative;
+    top: 10px;
+    /* position-top: 1opx; */
+}
+
+
+.headerLinks:link{
+    color: rgb(93, 93, 93);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9em;
+    text-decoration: none;
+    margin: 4px;
+    padding: 2px;
+    /* postion: absolute; */
+}
+.fa{
+    /* float: left; */
+    margin: 2px;
+    color: lightgray;
+}
+.faTwit:hover{
+    background-color: lightblue;
+    border-radius: 24px;
+}
+
+.faGit:hover{
+    background-color: black;
+    border-radius: 24px;
+}
+
+.faRss:hover{
+    background-color: orange;
+    border-radius: 24px;
+}
+
+/* .btnTwitter:link, .btnTwitter:visited{
+	color: lightgray;
+} */
+
+.headerPic{
+    width: 100%;
+}
+
+.articles{
+    border-top: 1px solid rgb(244, 242, 240);
+}
+.innerBody{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.articlesHeader{
+    font-family: 'Roboto', sans-serif;
+    font-size: .95em;
+    color: rgb(182, 182, 182);
+    margin-top: 0;
+}
+
+.date {
+    color: rgb(200, 200, 200);
+    font-family: 'Droid Sans', sans-serif;
+    font-size: .8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.articleTitle {
+    margin-top: 4px;
+    color: rgb(64,64,64);
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 1.45em;
+    font-weight: 700;
+}
+
+.articleMainContent {
+    color: rgb(184,184,184);
+    font-family: 'Droid Sans', sans-serif; 
+}
+.articleContent {
+    color: black;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+a:hover, a:active{
+	color: rgb(26, 255, 140);
+}
+.headerLinks:hover{
+	color: rgb(26, 255, 140);
+}
+
+.fa-bars:hover + .linkHeader{
+ 	display: block;
+}
+.articlePic{
+    width: 25%;
+}
+
+@media (min-width: 570px) {
+
+    #dropDown{
+        display: none;
+    }
+    
+    .hideShowPC{
+        display: block;
+        float: right;
+        width: 60%;
+        background-color: rgb(63, 63, 62);
+    }
+    
+    .innerBody{
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+		align-content: center;
+        
+     
+    }
+    .headerLinks:link{
+        background-color: white;
+    }
+}
+
+.flexTut1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+}
+.flexItem{
+    margin: 20px;
+    border: solid blue;
+    padding: 20px;
+    background: lightpink;
+}
+
+.flexTut2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+}
+
+.flexTut3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black;
+}
+
+

@@ -1,0 +1,52 @@
+---
+permalink: mondrianTut.html
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mondrian Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="../style/styles.css">
+	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class= "header">
+		<div class="topHeader parentBox">
+			<a href="index.html"><h1 id="headerName">John Cronin</h1></a>
+			<p id="headerInfo">Student at Omaha Code School</p>
+		</div>
+	</div>
+	<div class= "innerBody">
+		<div class="articles firstArticle">
+			<h3 class="articleTitle">Mondrian Tutorial</h3>
+			<p class="date">September 9th, 2017</p>
+			<p class="articleContent">This is not as much as a first project tutorial, but a project tutorial for those who are somewhat familiar with a couple languages, in this case, we will be using JavaScript as well as ruby. A client side language (JavaScript) and a server side language(ruby). Using the two of these, we will be saving the progress of a Mondrian painting. The html and CSS code will be given because we want to focus on the interaction between the front-end language and the server side language. </p>
+			<!-- <img src="img/MondrianTut.png" class="articlePic"> -->
+			<p class='articleContent'>The first thing to be done is to set up HTML that will be used. As you can see, there are only two sections we really need to focus on. There is the color pallet section as well as the actual painting. Those can be set up with the following code. </p>
+			<script src="https://gist.github.com/jt-cronin/d2ff17ffa0ba2fe947bc2ea93ccdade1.js"></script>
+
+			<p class='articleContent'> Once the html is set up, we apply styling using CSS to format the width and look of the boxes. </p>
+			<script src="https://gist.github.com/jt-cronin/30a01d6e9475aa412b42c394aead32de.js"></script>
+			<p class='articleContent'> At the very start, we will keep it simple by getting the squares inside of our painting to change colors when clicked on. To break it down, we have the colors in our pallet. When we click on that color in the pallet, we want anything we click on after that to change to the same color. </p>
+			<script src="https://gist.github.com/jt-cronin/20d41fba643fee9f8ee14f25798da373.js"></script>
+			<p class='articleContent'>For this task, we need to initiate event listeners, and we must start with the initial load listener. We set our first initial variables. We can start with the color white because that will be the default color. The second variables will be used as event listener variables. So, for the first event listener variable we will choose ‘color’ that will allow us access the color pallet in the document using the DOM. The second will be ‘row’ which allows us to get the specific box in the painting. We want to keep these as arrays so that we can loop through them because there are multiple options.</p>
+			<script src="https://gist.github.com/jt-cronin/859b70443d35675468e7c49944596b9b.js"></script>
+			<p class='articleContent'> Now that we have our DOM variables, we can loop through them. The first loop will set the background color being equal to our ‘paint’ variable. With our background color now set to our variable ‘paint’, we can loop through our other DOM variable and set all of their background colors equal to paint. </p>
+			<script src="https://gist.github.com/jt-cronin/ab7faaebe667351d29c72267abe191f8.js"></script>
+			<p class='articleContent'>If you have been following along with the code, you should now have a working Mondrian painting that you can make your own. Now gets to the more difficult part, saving the painting so that we can send it to the server in a way that could be recalled. To do this, we must be conscious of the way we send it off. We will start with the saving of the painting. For this we must add an event listener to the save button that we have on the bottom of the screen. We prevent default because we only have it linked back to our same page, so we do not want it jumping back to the top of the screen. Before we save it, we must get it into a format that we can send off. We create a format method and call it ‘convertSave’. I like to break my methods down as much as possible, so the convert save method will grab each one of the rows in the file, one by one. </p>
+			<script src="https://gist.github.com/jt-cronin/dec931692da0886a1d2a200a06c48344.js"></script>
+			<p class='articleContent'>On these new variables made from the DOM manipulation of these rows, I will call another method called ‘convertRow’. In this method, I will pass all of the variables with their ‘children’. As to pass in an array that I can loop through. In this convert row method, I take each array that has been passed through it and set up a switch statement that will allow me to test for different cases for the background color that we have set previously with our original javascript code. It will then return a string of four characters “####” that will associate with the background color. We then return back to our ‘convertSave’ function and can see that at the end of our convert save we put a string together from each row. This final string is called ‘sendString’ and will be the string that is returned to be sent to the server.</p>
+			<script src="https://gist.github.com/jt-cronin/241d732450c27842dd5d1917ecf63c80.js"></script>
+			<p class='articleContent'>We must now prepare our server side language to be ready to handle the requests. Like I said, we will be using Ruby and with that, Sinatra to help us create a local server and host it on our home computer. We will create our main Ruby program to handle the requests. We will also create a function file to take the string and add it to a file that we have created, and simply call it storage.csv. With Sinatra, we will need to create our new homepage which can be the same set of HTML code, copied and pasted into a new file called “homepage.erb”.  </p>
+			<script src="https://gist.github.com/jt-cronin/6f9255966efaf5bd045a96858644861c.js"></script>
+			<p class='articleContent'> Setting up the main file will be straight forward. At the top of “main.rb” we must require Sinatra and our relative functions file. When you are on the homepage, Sinatra will direct us to the homepage. We will create another Sinatra method and tell it to Post to what we will call “toServer”. We are going to take in paramaters and then send those to our send to file function that looks like this, which resides in our functions.rb file. </p>
+			<script src="https://gist.github.com/jt-cronin/208c002a9cbeefca992de4dfa2bec2bd.js"></script>
+			<p class='articleContent'>Back in our javascript file, we will send our ‘sendString’ variable to the server. It will look like this…</p>
+			<script src="https://gist.github.com/jt-cronin/015ee619caef768b414ccf2e7429d769.js"></script>
+			<p class='articleContent'>We call the savePainting function when the click the save button, in the same event listener. We make a new XMLHttpRequest. We then open the request and match it to the same things that were in the main.rb function but we pass it the variable of sendSavePoint in the params. We then send the request. For timing purposes, when the request loads, we call another function, this case being sendOff. I have made an alert to show us when all of the server passing has been completed by alerting us by saying “Your file has been saved”.</p>
+		</div>
+	</div>			
+</body>
+</html>
