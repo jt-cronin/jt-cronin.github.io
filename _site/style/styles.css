@@ -13,7 +13,7 @@ body {
 }
 
 .fa-bars{
-    /* float: right; */
+     float: right; 
 }
 
 .showM{
@@ -69,9 +69,14 @@ a:link,a:visited{
 }
 
 #dropDown{
-    float: right;
+    display: none;
 }
-
+.startHidden{
+    display: none;
+}
+.showPC{
+    display: none;
+}
 .linkHeader {
     /* display: none; */
     padding-top: 10px;
@@ -219,6 +224,16 @@ a:hover, a:active{
         float: right;
         width: 60%;
         background-color: rgb(63, 63, 62);
+        font-size: 1.75em;
+    }
+    .dropDown {
+        display: none;
+    }
+    #dropDownB{
+        display: none;
+    }
+    .showM{
+        display: none;
     }
     
     .innerBody{
@@ -236,6 +251,10 @@ a:hover, a:active{
     }
     .headerLinks:link{
         background-color: white;
+    }
+
+    .navLinks{
+
     }
 }
 

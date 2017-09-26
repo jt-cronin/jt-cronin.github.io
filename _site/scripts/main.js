@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
 
 	var dropDownContent = document.getElementsByClassName('hideShow')[0];
-	var dropDownMenu = document.getElementById('dropDown');
+	var dropDownMenu = document.getElementById('dropDownB');
 	var shown = false;
 
 	dropDownMenu.addEventListener('click', function(){
