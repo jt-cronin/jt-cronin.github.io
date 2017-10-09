@@ -293,9 +293,10 @@ a:hover, a:active{
     background: rgb(204, 86,72);
 
 }
-.pclPic{
-    /* width: ; */
-}
+/*.pclPic{
+    width: 1em;
+
+}*/
 .pclHead{
     text-align: center;
     background-color: lightblue;
@@ -316,4 +317,7 @@ a:hover, a:active{
 .pclContent{
     margin: 20px;
     padding: 2px;
+    color: black;
+    font-family: 'Droid Sans', sans-serif;
+    width: 45%
 }
