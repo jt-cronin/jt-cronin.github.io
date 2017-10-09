@@ -286,4 +286,11 @@ a:hover, a:active{
     border: solid black;
 }
 
+.resumeLink{
+    margin: 20px;
+    border: black;
+    padding: 20px;
+    background: rgb(204, 86,72);
+
+}
 
