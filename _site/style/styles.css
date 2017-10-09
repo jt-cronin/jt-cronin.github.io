@@ -316,6 +316,7 @@ a:hover, a:active{
     /*border: solid black;*/
     margin-left: 10px;
     margin-right: 10px;
+    background-color: rgb(223, 223, 223);
 }
 
 .pclContent{
@@ -327,6 +328,20 @@ a:hover, a:active{
 }
 
 .pclInnerBody{
+    background-color: rgb(223, 223, 223);
+}
+
+.pclFoot{
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    border: solid black;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    padding-bottom: 10px;
+}
+.pclPage{
     background-color: rgb(223, 223, 223);
 }
 
