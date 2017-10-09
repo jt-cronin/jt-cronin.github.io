@@ -293,4 +293,27 @@ a:hover, a:active{
     background: rgb(204, 86,72);
 
 }
+.pclPic{
+    /* width: ; */
+}
+.pclHead{
+    text-align: center;
+    background-color: lightblue;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+.pclBody {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    border: solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+.pclContent{
+    margin: 20px;
+    padding: 2px;
+}
