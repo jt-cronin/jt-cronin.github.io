@@ -252,11 +252,8 @@ a:hover, a:active{
     .headerLinks:link{
         background-color: white;
     }
-
-    .navLinks{
-
-    }
 }
+
 
 .flexTut1 {
     display: flex;
@@ -293,23 +290,30 @@ a:hover, a:active{
     background: rgb(204, 86,72);
 
 }
-/*.pclPic{
-    width: 1em;
-
-}*/
+/*This is all formatting for the PCL pages*/
+.pclPic{
+    background: url(../img/coloradoSolo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 300px;
+}
 .pclHead{
     text-align: center;
-    background-color: lightblue;
     padding-top: 70px;
     padding-bottom: 70px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-size: 2em;
+    background: lightblue; /* For browsers that do not support gradients */    
+    background: -webkit-radial-gradient(lightblue, blue); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(lightblue, blue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(lightblue, blue); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(lightblue, blue); /* Standard syntax (must be last) */
 }
 .pclBody {
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
-    border: solid black;
+    /*border: solid black;*/
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -321,3 +325,31 @@ a:hover, a:active{
     font-family: 'Droid Sans', sans-serif;
     width: 45%
 }
+
+.pclInnerBody{
+    background-color: rgb(223, 223, 223);
+}
+
+@media (min-width: 570px) {
+
+    .pclPic {
+    background: url(../img/coloradoSolo.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 450px;
+    }
+    .pclBody {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* border: solid black; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(64,64,64);
+}
+    .pclContent{
+        margin-bottom: 0;
+    }
+
+}
+
