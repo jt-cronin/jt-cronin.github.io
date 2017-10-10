@@ -290,6 +290,10 @@ a:hover, a:active{
     background: rgb(204, 86,72);
 
 }
+
+.backButtonDiv{
+    text-align: center;
+}
 /*This is all formatting for the PCL pages*/
 .pclPic{
     background: url(../img/coloradoSolo.jpg) no-repeat;
