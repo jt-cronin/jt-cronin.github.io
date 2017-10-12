@@ -353,6 +353,9 @@ a:hover, a:active{
 .pclPage{
     background-color: rgb(223, 223, 223);
 }
+.footImg{
+    text-align: center;
+}
 
 @media (min-width: 570px) {
 
