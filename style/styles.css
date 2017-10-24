@@ -243,10 +243,7 @@ a:hover, a:active{
 
     }
     .innerBody{
-        display: flex;
-        flex-direction: column ;
-        align-items: center;
-		align-content: center;
+        margin: 0 auto;
         padding-left: 1.2em;
         padding-right: 1.2em;
         margin-top: 2em;
@@ -257,6 +254,10 @@ a:hover, a:active{
     }
     .headerLinks:link{
         background-color: white;
+    }
+    .aboutMe{
+    max-width: 800px;
+    text-align: left;d
     }
 }
 
@@ -296,6 +297,8 @@ a:hover, a:active{
     background: rgb(204, 86,72);
 
 }
+
+
 
 .backButtonDiv{
     text-align: center;
@@ -385,4 +388,6 @@ a:hover, a:active{
     }
 
 }
+
+
 
