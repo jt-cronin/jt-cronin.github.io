@@ -60,6 +60,7 @@ a:link,a:visited{
 #headerInfo{
     color: rgb(166, 166, 166);
     font-size: 1.2em;
+    margin-left: 2px;
     /* float: left; */
     /* margin-top: 1px; */
 }
@@ -118,7 +119,7 @@ a:link,a:visited{
     font-size: .9em;
     text-decoration: none;
     margin: 4px;
-    padding: 2px;
+    padding: 4px;
     /* postion: absolute; */
 }
 .fa{
